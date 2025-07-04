@@ -166,6 +166,14 @@ nav .tabs .indicator {
     color: #ffffff;
 }
 
+#nickname-modal .modal-content {
+    background-color: rgba(66, 66, 66, 0.9) !important;
+}
+
+#nickname-modal .modal-footer {
+    background-color: rgba(66, 66, 66, 0.9) !important;
+}
+
 #nickname-modal .modal-content h4 {
     color: #ffffff;
 }
