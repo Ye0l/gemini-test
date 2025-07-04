@@ -1,0 +1,237 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #212121; /* Solid dark grey background */
+}
+
+nav {
+    background-color: rgba(33, 33, 33, 0.9) !important; /* Slightly less transparent dark grey for nav */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav .brand-logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #7c4dff; /* Purple accent for brand logo */
+}
+
+nav .tabs {
+    background-color: transparent; /* Make tabs background transparent within nav */
+}
+
+nav .tabs .tab a {
+    color: #bdbdbd; /* Default tab text color */
+    font-weight: 400;
+}
+
+nav .tabs .tab a:hover {
+    color: #ffffff; /* Hover tab text color */
+}
+
+nav .tabs .tab a.active {
+    color: #7c4dff; /* Active tab text color */
+    font-weight: 700;
+}
+
+nav .tabs .indicator {
+    background-color: #7c4dff; /* Indicator color */
+}
+
+.card {
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: rgba(66, 66, 66, 0.8) !important; /* Semi-transparent dark grey */
+}
+
+.card .card-content {
+    padding: 24px;
+}
+
+.card .card-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.input-field input[type=text]:not(.browser-default),
+.input-field textarea:not(.browser-default) {
+    border-bottom: 1px solid rgba(97, 97, 97, 0.8); /* Darker grey for input borders */
+    box-shadow: 0 1px 0 0 rgba(97, 97, 97, 0.8);
+}
+
+.input-field input[type=text]:not(.browser-default):focus,
+.input-field textarea:not(.browser-default):focus {
+    border-bottom: 1px solid #7c4dff; /* Purple accent on focus */
+    box-shadow: 0 1px 0 0 #7c4dff;
+}
+
+.input-field label {
+    color: #bdbdbd; /* Light grey for labels */
+}
+
+.input-field input[type=text]:focus + label,
+.input-field textarea:focus + label {
+    color: #7c4dff; /* Purple accent for label on focus */
+}
+
+.btn {
+    border-radius: 4px;
+}
+
+#messages {
+    border: 1px solid rgba(66, 66, 66, 0.8);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(33, 33, 33, 0.8) !important; /* Semi-transparent dark grey */
+}
+
+#messages .message-item {
+    margin-bottom: 5px;
+}
+
+#messages .message-item strong {
+    color: #7c4dff; /* Purple for username */
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: flex-start; /* Default for others' messages */
+}
+
+.message-container.my-message {
+    align-items: flex-end; /* Align my messages to the right */
+}
+
+.username-display {
+    font-size: 0.8em;
+    color: #bdbdbd; /* Light grey for username */
+    margin-bottom: 2px;
+    margin-left: 5px; /* Indent slightly from bubble */
+}
+
+.message-container.my-message .username-display {
+    margin-right: 5px;
+    margin-left: 0; /* Reset for my messages */
+}
+
+.message-bubble {
+    background-color: rgba(82, 82, 82, 0.8); /* Darker grey for chat bubbles */
+    border-radius: 15px;
+    padding: 8px 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.message-container.my-message .message-bubble {
+    background-color: rgba(124, 77, 255, 0.8); /* Purple for my messages */
+}
+
+.message-bubble .message-content {
+    margin-bottom: 5px;
+}
+
+.message-bubble .message-timestamp {
+    font-size: 0.7em;
+    text-align: right;
+    display: block;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    /* ... 기존 스타일 유지 ... */
+}
+
+.post-item {
+    background-color: rgba(66, 66, 66, 0.8) !important;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+
+.post-item h5 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #7c4dff;
+}
+
+.post-item p {
+    margin-bottom: 0;
+}
+
+/* Nickname Modal Styles */
+#nickname-modal {
+    background-color: rgba(66, 66, 66, 0.9) !important;
+    color: #ffffff;
+}
+
+#nickname-modal .modal-content h4 {
+    color: #ffffff;
+}
+
+#nickname-modal .input-field input[type=text] {
+    color: #ffffff;
+}
+
+/* Tabs Styles */
+.tabs {
+    background-color: rgba(66, 66, 66, 0.8) !important; /* Semi-transparent dark grey */
+}
+
+.tabs .tab a {
+    color: #bdbdbd; /* Default tab text color */
+}
+
+.tabs .tab a:hover {
+    color: #ffffff; /* Hover tab text color */
+}
+
+.tabs .tab a.active {
+    color: #7c4dff; /* Active tab text color */
+}
+
+.tabs .indicator {
+    background-color: #7c4dff; /* Indicator color */
+}
+
+/* Comments and Reactions */
+.comments-section {
+    margin-top: 15px;
+    border-top: 1px solid rgba(97, 97, 97, 0.8);
+    padding-top: 10px;
+}
+
+.comment-item {
+    background-color: rgba(82, 82, 82, 0.8) !important;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+
+.comment-item strong {
+    color: #7c4dff;
+}
+
+.reactions-section {
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+.reaction-button {
+    background-color: rgba(97, 97, 97, 0.8) !important;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+
+.reaction-button:hover {
+    background-color: rgba(117, 117, 117, 0.8);
+}
+
+.reaction-count {
+    margin-left: 5px;
+    font-weight: bold;
+}
+

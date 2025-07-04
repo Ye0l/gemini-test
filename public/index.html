@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Board & Chat</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Google Fonts - Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="white-text">
+    <!-- Nickname Modal -->
+    <div id="nickname-modal" class="modal white-text">
+        <div class="modal-content">
+            <h4>닉네임 설정</h4>
+            <div class="input-field">
+                <input id="nickname-input" type="text" class="validate white-text">
+                <label for="nickname-input">닉네임</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" id="save-nickname-btn" class="modal-close waves-effect waves-green btn-flat white-text">저장</a>
+        </div>
+    </div>
+
+    <nav class="nav-extended">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Gemini Board & Chat</a>
+        </div>
+        <div class="nav-content container">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#board-section">게시판</a></li>
+                <li class="tab"><a href="#chat-section">채팅방</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <!-- Tabs content will be here -->
+            </div>
+
+            <!-- Bulletin Board Section -->
+            <div id="board-section" class="col s12">
+                <div class="card">
+                    <div class="card-content white-text">
+                        <span class="card-title">게시물 작성</span>
+                        <div class="input-field">
+                            <input id="post-title" type="text" class="validate white-text">
+                            <label for="post-title">제목</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea id="post-content" class="materialize-textarea white-text"></textarea>
+                            <label for="post-content">내용</label>
+                        </div>
+                        <button id="submit-post" class="btn waves-effect waves-light deep-purple accent-2">게시</button>
+                    </div>
+                </div>
+                <div id="posts-container"></div>
+            </div>
+
+            <!-- Chat Section -->
+            <div id="chat-section" class="col s12">
+                <div class="card">
+                    <div class="card-content white-text">
+                        <span class="card-title">채팅방</span>
+                        <div id="messages" class="card-panel grey darken-4 white-text" style="height: 400px; overflow-y: scroll;"></div>
+                        <div class="input-field">
+                            <input id="m" type="text" class="validate white-text" autocomplete="off" /><button class="btn waves-effect waves-light deep-purple accent-2" id="send-message">전송</button>
+                            <label for="m">메시지</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Socket.IO Client -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/client.js"></script>
+</body>
+</html>
